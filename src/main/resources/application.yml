@@ -2,7 +2,7 @@ server:
   port: 9191
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/oauthserv?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/b566930_qa
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver

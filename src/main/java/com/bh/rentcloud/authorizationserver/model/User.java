@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table(name = "security_business_owners")
 @Data
 public class User implements Serializable {
     public User() {
@@ -15,7 +15,6 @@ public class User implements Serializable {
     public User(User user) {
         this.username = user.getUsername();
         this.password = user.getPassword();
-        this.email = user.getEmail();
         this.enabled = user.isEnabled();
         this.accountNonExpired = user.isAccountNonExpired();
         this.credentialsNonExpired = user.isCredentialsNonExpired();
@@ -31,15 +30,13 @@ public class User implements Serializable {
     private String username;
     @Column(name = "password")
     private String password;
-    @Column(name = "email")
-    private String email;
     @Column(name = "enabled")
     private boolean enabled;
-    @Column(name = "accountNonExpired")
+    @Column(name = "account_non_expired")
     private boolean accountNonExpired;
-    @Column(name = "credentialsNonExpired")
+    @Column(name = "credentials_non_expired")
     private boolean credentialsNonExpired;
-    @Column(name = "accountNonLocked")
+    @Column(name = "account_non_locked")
     private boolean accountNonLocked;
 
 
@@ -72,14 +69,6 @@ public class User implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public boolean isEnabled() {
